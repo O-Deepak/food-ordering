@@ -123,7 +123,7 @@ void main()
     head x, s, m, d, o;
     x.start=s.start=m.start=d.start=o.start=NULL;
     float fcode;
-    int qty, lo;
+    int quantity, location;
     ccolor(26);
     insertend(&s, 1.1, "Samosa", 1, 50);
     insertend(&s, 1.2, "Grilled Cheese Sandwich", 1, 100);
@@ -145,7 +145,7 @@ void main()
     insertend(&d, 3.6, "Orea Freakshake", 1, 150);
     insertend(&d, 3.7, "Fruit Milkshake", 1, 80);
     //login
-    char uid[20], pwd[20], uid1[20], pwd1[20], c=' ', k=' ';
+    char userid[30], password[30], userid1[30], password1[30], c=' ', k=' ';
     int i=0, ch;
     while(1)
     {
@@ -158,38 +158,38 @@ mainscr: printf("\n\nEnter Choice: 1. Login 2.New User 3.Exit\n");
         if(ch==2)
         {
             printf(" \n\n                  ENTER USERNAME:-");
-            scanf("%s", &uid1);
+            scanf("%s", &userid1);
             printf(" \n\n                  ENTER PASSWORD:-");
             while(i<20)
             {
-                pwd1[i]=getch();
-                c=pwd1[i];
+                password1[i]=getch();
+                c=password1[i];
                 if(c=='\r') break;
                 else printf("*");
                 i++;
             }
-            pwd1[i]='\0';
+            password1[i]='\0';
             printf("\n\n            Registered Successfully!\n");
             Sleep(2000);
         }
         else
         {
-            printf("\n  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  ");
+            
             printf(" \n\n                  ENTER USERNAME:-");
-            scanf("%s", &uid);
+            scanf("%s", &userid);
             printf(" \n\n                  ENTER PASSWORD:-");
             c=' '; i=0;
             while(i<20)
             {
-                pwd[i]=getch();
-                c=pwd[i];
+                password[i]=getch();
+                c=password[i];
                 if(c=='\r') break;
                 else printf("*");
                 i++;
             }
-            pwd[i]='\0';
+            password[i]='\0';
             //USERMENU
-            if(strcmp(uid,uid1)==0&&strcmp(pwd,pwd1)==0)
+            if(strcmp(userid,userid1)==0&&strcmp(password,password1)==0)
             {
                 printf("\n\n            LOGIN SUCCESFULL!");
                 Sleep(2000);
